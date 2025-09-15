@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "5542b66b-cf9e-403e-8c5e-9265c9546a82",
+		"name": "Crude Node JS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42629430"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\":\"julaia\",\r\n\"email\":\"juli@gmail.com\",\r\n  \"password\" : \"11078425452\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_base}}/api/users",
+					"host": [
+						"{{url_base}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all users",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjg5Y2JiOWMwZDE1OWRjYmQ4OWQ1MWVjIn0sImlhdCI6MTc1Njc0Mjg0OSwiZXhwIjoxNzU2NzQzNDQ5fQ.50t5jF9EAni7wnDaa3BWFvJR_NbSXUXpKauf1kNHQ4Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url_base}}/api/users",
+					"host": [
+						"{{url_base}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_base}}/api/users/689a0bf6af79bb3681f45196",
+					"host": [
+						"{{url_base}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"689a0bf6af79bb3681f45196"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjg5Y2JiOWMwZDE1OWRjYmQ4OWQ1MWVjIn0sImlhdCI6MTc1Njc0NTc1NSwiZXhwIjoxNzU2NzQ2MzU1fQ.mRA3nufNZ4whGFrOdaHUZwt0Lzv3glkxS2A7_8xXVbk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url_base}}/api/users/profile",
+					"host": [
+						"{{url_base}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user by ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\" : \"Juliana2\",\r\n  \"email\": \"juliianavalenciia2gmail.com\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_base}}/api/users/689a169f60ec8e082a1aa9d8",
+					"host": [
+						"{{url_base}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"689a169f60ec8e082a1aa9d8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url_base}}/api/users/689c9f535f18b77a8aa6591b",
+					"host": [
+						"{{url_base}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"689c9f535f18b77a8aa6591b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"juliianavalenciia5@gmail.com\",\r\n    \"password\": \"11078425452\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_base}}/api/users/login",
+					"host": [
+						"{{url_base}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url_base",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
